@@ -16,6 +16,7 @@
 return [
     'Zend\Router',
     'Zend\Validator',
+    'Zend\Db',
     'Application',
-    'Pessoa', 
+    'Pessoa',
 ];

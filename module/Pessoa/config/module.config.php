@@ -8,18 +8,18 @@ return [
     'router' => [
         'routes'=>[
             'pessoa'=>[
-                'type' => \Zend\Router\Http\Segment::class,
+                'type'    => \Zend\Router\Http\Segment::class,
                 'options' => [
-                    'route' => '/pessoa[/:action[/:id]]', 
+                    'route'      => '/pessoa[/:action[/:id]]', 
                     'constrains' => [
                         //expressão regular
                         //entradas para action sendo alfanumerica
                         'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
-                        'id' => '[0-9]+'
+                        'id'     => '[0-9]+'
                     ], 
                     'defaults' => [
                         'controller' => Controller\PessoaController::class, 
-                        'action' => 'index',
+                        'action'     => 'index',
                     ],
                 ],
             ],
@@ -27,13 +27,21 @@ return [
     ],
     'controllers' => [
         'factories' => [
-            Controller\PessoaController::class => InvokableFactory::class,
+            //Controller\PessoaController::class => InvokableFactory::class,
         ],
     ],
     'view_manager' => [
         'template_path_stack' => [
             'pessoa' => __DIR__ . '/../view',
         ],
+    ],
+    'db' => [
+        'driver'   => 'Pdo_Mysql', 
+        'database' => 'bruno', 
+        'username' => 'bruno', 
+        'passaword'=>  'natsuhappy10', 
+        'hostname' => 'localhost:5432'
+
     ],
 ];
 // as possiveis entradas para a rota estabelecida acima 
