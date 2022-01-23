@@ -22,7 +22,9 @@ class Module Implements ConfigProviderInterface{
                 Model\PessoaTable::class => function ($container){
                     $tableGateway = $container->get(Model\PessoaTableGateway::class);
                     
-                    return new PessoaTable($tableGateway);
+                    return new Model\PessoaTable($tableGateway);
+                        var_dump($tableGateway);
+                        die;
                 },
                 Model\PessoaTableGateway::class => function($container){
                     $dbAdapter = $container->get(AdapterInterface::class);

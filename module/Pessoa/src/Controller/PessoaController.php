@@ -10,7 +10,7 @@ class PessoaController extends AbstractActionController{
 
     public function __construct($table){
 
-        $this->$table = $table;
+        $this->table = $table;
 
     }
 
