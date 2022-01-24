@@ -36,11 +36,12 @@ return [
         ],
     ],
     'db' => [
-        'driver'   => 'Pdo_Mysql', 
-        'database' => 'bruno', 
-        'username' => 'bruno', 
-        'passaword'=>  'natsuhappy10', 
-        'hostname' => 'localhost:5432'
+        'driver'   => 'Pdo_Pgsql', 
+        'database' => 'novo', 
+        'username' => 'teste', 
+        'password'=> '12345', 
+        'hostname' => 'localhost',
+        'port'     => '5432'
 
     ],
 ];
