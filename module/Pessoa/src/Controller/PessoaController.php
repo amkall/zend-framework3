@@ -14,8 +14,12 @@ class PessoaController extends AbstractActionController{
 
     }
 
+    //Ao final do metodo é utilizado o sufixo Action para mostrar que
+    //se refere a uma ação que sera tomada
 
     public function indexAction(){
+        //Ao retornar uma view model o zend entende que o que sera renderizado
+        //sera o prefixo que acompanha o Action no nome do metodo nesse caso "index"
         return new ViewModel(['pessoas' => $this->table->getAll()]);
     }
 

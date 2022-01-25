@@ -14,6 +14,10 @@
  //novos modulos devem ser
  // inseridos aqui para serem reconhecidos pelo zend
 return [
+    'Zend\Form',
+    'Zend\InputFilter',
+    'Zend\Filter',
+    'Zend\Hydrator',
     'Zend\Router',
     'Zend\Validator',
     'Zend\Db',

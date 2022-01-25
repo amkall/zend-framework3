@@ -11,6 +11,8 @@ use Pessoa\Controller\PessoaController;
 // que por sua vez busca as Actions em PesssoaController
 class Module Implements ConfigProviderInterface{
 
+    //aponta onde a configuração do modulo esta e retorna para a mesclagem com a configuração global
+    //metodo da interface ConfigProviderInterface
     public function getConfig(){
         return include __DIR__ . "/../config/module.config.php";
     }
