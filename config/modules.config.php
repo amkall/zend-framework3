@@ -11,8 +11,9 @@
  * This should be an array of module namespaces used in the application.
  */
 
- //novos modulos devem ser
+ // novos modulos devem ser
  // inseridos aqui para serem reconhecidos pelo zend
+ // o composer.json autoload tbm deve ser atualizado
 return [
     'Zend\Form',
     'Zend\InputFilter',

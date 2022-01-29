@@ -34,7 +34,8 @@ return [
             ],
         ],
     ],
-    //usar o invokable como construtor generico da classe PessoaController
+    //usar o invokable como construtor generico da classe PessoaController, pois 
+    //a classe PessoaController herda da classe AbstractController e pode usar o factory
     'controllers' => [
         'factories' => [
             //Controller\PessoaController::class => InvokableFactory::class,
