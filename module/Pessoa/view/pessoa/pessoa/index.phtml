@@ -3,6 +3,8 @@
 ?>
 
 <h1>Lista de Pessoas</h1>
+
+
 <table class = "table table-stripped">  
     <tr>
         <th>Nome</th>
@@ -17,3 +19,4 @@
     endforeach;
 ?>
 </table>
+<a href="<?=$this->url('pessoa', ['action'=>'adicionar'])?>" class = "btn btn-success">adicionar</a>

@@ -24,6 +24,7 @@ class ComposerStaticInit9aef0fa78a7af49eefa8846f267d700d
             'Zend\\Loader\\' => 12,
             'Zend\\Json\\' => 10,
             'Zend\\InputFilter\\' => 17,
+            'Zend\\I18n\\' => 10,
             'Zend\\Hydrator\\' => 14,
             'Zend\\Http\\' => 10,
             'Zend\\Form\\' => 10,
@@ -96,6 +97,10 @@ class ComposerStaticInit9aef0fa78a7af49eefa8846f267d700d
         'Zend\\InputFilter\\' => 
         array (
             0 => __DIR__ . '/..' . '/zendframework/zend-inputfilter/src',
+        ),
+        'Zend\\I18n\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-i18n/src',
         ),
         'Zend\\Hydrator\\' => 
         array (

@@ -5,6 +5,7 @@ namespace Pessoa\Model;
 use Zend\Db\TableGateway\TableGatewayInterface;
 use RuntimeException;
 
+// resgatar e salvar informações da classe pessoa no banco de dados
 class PessoaTable{
 
     private $tableGateway;

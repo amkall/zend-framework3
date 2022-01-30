@@ -18,10 +18,13 @@ class Module Implements ConfigProviderInterface{
     }
 
     public function getServiceConfig(){
-        
+        //utilização de factory para a instanciação da classe PessoaTable
         return [
             'factories' => [
+                //quando PessoaTable for chamada ela iniciara a seguinte função
+                // que servira como construtor
                 Model\PessoaTable::class => function ($container){
+                    // inicializa a variavel tableGateway da classe pessoaTable
                     $tableGateway = $container->get(Model\PessoaTableGateway::class);
                     
                     return new Model\PessoaTable($tableGateway);
@@ -29,10 +32,16 @@ class Module Implements ConfigProviderInterface{
                         die;
                 },
                 Model\PessoaTableGateway::class => function($container){
+                    //?????????????
                     $dbAdapter = $container->get(AdapterInterface::class);
+                    //criar os registros da tabela pessoa
                     $resultSetPrototype = new ResultSet();
 
                     $resultSetPrototype->setArrayObjectPrototype(new Model\Pessoa());
+
+                    //seta qual tabela do banco de dados deve ser carregada com base 
+                    //em determinada classe criada anteriormente 
+                    //instanciada pela variavel $resultSetPrototype
                     return new TableGateway('pessoa', $dbAdapter, null, $resultSetPrototype);
                 },
             ]
